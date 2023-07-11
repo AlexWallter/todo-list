@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Todo app</title>
+</head>
+<body>
+  <main>
+      <picture>
+          <source media="(min-width: 700px)" srcset="./images/bg-desktop-dark.jpg">
+          <img src="./images/bg-mobile-dark.jpg" id = "top-image">
+      </picture>
+
+    <div id="content-container">
+      <div id = "top-part">
+        <div id = "title-div">
+          <h1 id = "title"> TODO</h1>
+          <div id="theme-switch"></div>
+        </div>
+      </div>
+      <form id = "form" onSubmit="return false">
+        <div class = 'check-icon no-style' id = 'input-btn'></div>
+        <input type="text" name="write a task" id="input" placeholder="create a new todo...">
+      </form>
+      <div id = "list-container">
+          <ul id = "items-list"><li class = "active list-item" draggable="true"><div class="check-icon"></div>prove the Riemann hypothesis<div class ="cross-icon"></div> </li>
+            <li class = "active list-item" draggable="true"><div class="check-icon"></div>make 211 no out in the fourth innings of the last Test Match at the Oval<div class ="cross-icon"></div></li>
+            <li class = "active list-item" draggable="true"><div class="check-icon"></div>find an argument for the nonexistence of God which shall convince the general public<div class ="cross-icon"></div></li>
+          </ul>
+          <div id="clear-task">
+            <p id="items-left">0 items left</p>
+            <p id="clear" class="clear-completed">Clear Completed</p>
+          </div>
+      </div>
+      <div id="list-options">
+        <p id = "all" class = "task-visualize">All</p>
+        <p id = "active-only">Active</p>
+        <p id = "completed-only">Completed</p>
+      </div>
+  
+      <div id="functionality-reminder"><p></p>Drag and drop to reorder list</div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
